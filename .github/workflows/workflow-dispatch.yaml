@@ -1,0 +1,17 @@
+name: testing workflow dispatch
+
+on:
+    workflow_dispatch:
+        inputs:
+            VersionName:
+                required: true
+                description: "this is version number to be released"
+
+jobs:
+    testing-workflow-dispatch:
+        name: testing_workflow_dispatch
+        runs-on: ubuntu-latest
+        steps:
+            - name: testing workflow-dispatch
+              run: echo "workflow dispatch"
+
